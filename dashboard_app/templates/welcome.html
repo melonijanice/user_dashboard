@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<form action="/signin" method="post">
+    {% csrf_token %}
+    <div id="welcome_banner">
+        <p>Welcome to the Test</p>
+        <p> We're going to build a cool application using a MVC framework! This application was built with the village88 folks!</p>
+        <button type="submit" name="start_app" class="btn btn-primary btn-sm">Start</button>
+    </div>
+</form>
+<div class="d-flex p-2">
+    <div class="p-2">
+        <h4>Manage Users</h4>
+        <p>Using this application, you'll learn how to add, remove, and edit users for the application.</p>
+    </div>
+    <div class="p-2">
+        <h4>Leave Messages</h4>
+        <p>Users will be able to leave a message to another user using this application.</p>
+    </div>
+    <div class="p-2">
+        <h4>Edit User Information</h4>
+        <p>Admins will be able to edit another user's information(email address,first name, last name, etc</p>
+    </div>
+</div>
+{% endblock %}
